@@ -1,0 +1,20 @@
+{
+  "name": "Nanonet",
+  "version": "2.0.0",
+  "description": "Nanonet Consulty Agency",
+  "author": "",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/i18n": "^7.3.0",
+    "nuxt": "^2.0.0",
+    "vue": "^2.0.8",
+    "vue-server-renderer": "^2.6.12",
+    "vue-template-compiler": "^2.6.12"
+  }
+}
