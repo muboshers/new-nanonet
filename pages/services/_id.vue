@@ -5,7 +5,7 @@
     <About />
 
     <div class="data-container" v-if="eduData.length > 0">
-      <h2 class="text-center">{{ $t("header.service") }}</h2>
+      <h2 class="text-center">{{ $t("header.courses") }}</h2>
       <div class="service-area bg-color area-padding-2">
         <div class="container">
           <div class="row">
@@ -36,23 +36,29 @@
       </div>
     </div>
     <Welcome />
-    <div v-if="serviceData.length > 0">
-      <div class="service-area bg-color area-padding-2">
-        <div class="container">
-          <div class="row">
-            <div class="all-services">
-              <div
-                class="col-md-4 col-sm-6 col-xs-12"
-                v-for="(service, index) of serviceData"
-                :key="index"
-              >
-                <div class="single-service wow fadeInUp" data-wow-delay="0.3s">
-                  <div class="service-inner">
-                    <div class="service-content">
-                      <h4>{{ service.title }}</h4>
-                      <p>
-                        {{ service.description }}
-                      </p>
+    <div class="data-container" v-if="serviceData.length > 0">
+      <h2 class="text-center">{{ $t("header.service") }}</h2>
+      <div>
+        <div class="service-area bg-color area-padding-2">
+          <div class="container">
+            <div class="row">
+              <div class="all-services">
+                <div
+                  class="col-md-4 col-sm-6 col-xs-12"
+                  v-for="(service, index) of serviceData"
+                  :key="index"
+                >
+                  <div
+                    class="single-service wow fadeInUp"
+                    data-wow-delay="0.3s"
+                  >
+                    <div class="service-inner">
+                      <div class="service-content">
+                        <h4>{{ service.title }}</h4>
+                        <p>
+                          {{ service.description }}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -62,6 +68,7 @@
         </div>
       </div>
     </div>
+
     <Quote />
     <Footer />
   </div>
@@ -82,13 +89,13 @@ export default {
     Welcome,
     Quote,
     About,
-    Footer
+    Footer,
   },
   data() {
     return {
       category: null,
       serviceData: [],
-      eduData: []
+      eduData: [],
     };
   },
   head() {
@@ -103,21 +110,21 @@ export default {
           "requestLanguage"
         )}`
       )
-        .then(res => res.json())
-        .then(d => (this.category = d.data))
-        .catch(err => console.log(err.message));
+        .then((res) => res.json())
+        .then((d) => (this.category = d.data))
+        .catch((err) => console.log(err.message));
     },
     async getAllService(url, data) {
       const { id } = this.$route.params;
       await fetch(`${url}?lang=${this.$t("requestLanguage")}&categoryId=${id}`)
-        .then(res => res.json())
-        .then(d => (this[data] = d.data))
-        .catch(err => console.log(err));
+        .then((res) => res.json())
+        .then((d) => (this[data] = d.data))
+        .catch((err) => console.log(err));
     },
     dateFormat(date) {
       const newTime = new Date(date);
       return `${newTime.getDate()}/${newTime.getMonth() + 1}`;
-    }
+    },
   },
   mounted() {
     this.getCategoryById();
@@ -129,7 +136,7 @@ export default {
       "https://consultingweb.duckdns.org/api/v1/service/edu/list",
       "eduData"
     );
-  }
+  },
 };
 </script>
 

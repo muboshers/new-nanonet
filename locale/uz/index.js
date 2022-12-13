@@ -5,14 +5,21 @@ const uzbek = {
     about: "Biz haqimizda",
     service: "Xizmatlar",
     blog: "Maqola",
-    courses:"O'quv kurslari"
+    courses: "O'quv kurslari",
   },
   lang: "UZB",
   read: "Ko'proq o'qish",
+
+  news: {
+    title: "Bizning Maqolalar",
+    description:
+      "En so'ngi maqolalarimizni birinchilardan bo'lib kuzatib boring",
+  },
+
   home: {
     header: {
       title: "Barcha ulkan marralar oldida katta omadsizliklar bo'ladi",
-      description: "O'z kelajagingiz uchun bugundan o'rganishni boshlang"
+      description: "O'z kelajagingiz uchun bugundan o'rganishni boshlang",
     },
 
     slide: {
@@ -20,15 +27,15 @@ const uzbek = {
         {
           title:
             "Menda unchalik iste'dod yo'q. Men shunchaki ishtiyoq bilan qiziqaman",
-          description: "Albert Ensheteyn"
+          description: "Albert Ensheteyn",
         },
         {
           title:
             "Fikrni qabul qilmasdan, uni o'ziga jalb qila olish bilimli aqlning belgisidir",
-          description: "Aristotel"
-        }
-      ]
-    }
+          description: "Aristotel",
+        },
+      ],
+    },
   },
 
   contact: {
@@ -38,7 +45,8 @@ const uzbek = {
     phoneNumber: "Iltimos aloqa uchun raqamni kiriting",
     message: "Izoh va fikrlaringizni kiriting",
     button: "Yuborish",
-    description: "Bizga savolingizni yo'llang biz sizga tez orada javob beramiz"
+    description:
+      "Bizga savolingizni yo'llang biz sizga tez orada javob beramiz",
   },
   footer: {
     description: "Ta'lim zulmatdan yorug'likka harakatdir",
@@ -48,16 +56,16 @@ const uzbek = {
       title: "Ma'lumotlar",
       email: "Elektron Pochta",
       phoneNumber: "Telefon raqami",
-      location: "Manzil"
+      location: "Manzil",
     },
 
     address: {
-      city: "A.Xodjayev ko'chasi 39-uy"
-    }
+      city: "A.Xodjayev ko'chasi 39-uy",
+    },
   },
   partner: {
     title: "Bizning hamkorlarimiz",
-    organizationName: "Tahshkilot Nomi"
+    organizationName: "Tahshkilot Nomi",
   },
 
   service: {
@@ -67,42 +75,42 @@ const uzbek = {
       {
         title: "Aloqa Operatori",
         description:
-          "Aloqa Operatori vakili mijozlar bilan kiruvchi va chiquvchi qo'ng'iroqlarni amalga oshiradi. Ularning vazifalariga kompaniya taklif qilayotgan mahsulotlar yoki xizmatlar haqidagi savollar va xavotirlarga javob berish kiradi."
+          "Aloqa Operatori vakili mijozlar bilan kiruvchi va chiquvchi qo'ng'iroqlarni amalga oshiradi. Ularning vazifalariga kompaniya taklif qilayotgan mahsulotlar yoki xizmatlar haqidagi savollar va xavotirlarga javob berish kiradi.",
       },
       {
         title: "SMM Marketing",
         description:
-          "Ijtimoiy media marketingi (SMM) ijtimoiy media ilovalaridan marketing vositasi sifatida foydalanadigan internet-marketing shaklidir."
+          "Ijtimoiy media marketingi (SMM) ijtimoiy media ilovalaridan marketing vositasi sifatida foydalanadigan internet-marketing shaklidir.",
       },
       {
         title: "Turk Tili",
         description:
-          "AQSh Davlat departamenti turk tilini tanqidiy til deb biladi, ya'ni u odamlar o'rganishi kerak bo'lgan eng muhim tillardan biridir. Bundan tashqari, turk tilini o‘rganish mintaqada so‘zlashuvchi boshqa turkiy tillarni, jumladan, qozoq, qirg‘iz va o‘zbek tillarini tushunishingizni osonlashtirishi mumkin. "
+          "AQSh Davlat departamenti turk tilini tanqidiy til deb biladi, ya'ni u odamlar o'rganishi kerak bo'lgan eng muhim tillardan biridir. Bundan tashqari, turk tilini o‘rganish mintaqada so‘zlashuvchi boshqa turkiy tillarni, jumladan, qozoq, qirg‘iz va o‘zbek tillarini tushunishingizni osonlashtirishi mumkin. ",
       },
       {
         title: "Psixologiya",
         description:
-          "Psixologiya inson faoliyati va rivojlanishi jarayonida voqelikni, psixik jarayonlarni, hodisalarni, hodisalarni, his-tuyg'ularni psixologik aks ettirish haqidagi bevosita fandir."
-      }
-    ]
+          "Psixologiya inson faoliyati va rivojlanishi jarayonida voqelikni, psixik jarayonlarni, hodisalarni, hodisalarni, his-tuyg'ularni psixologik aks ettirish haqidagi bevosita fandir.",
+      },
+    ],
   },
 
   welcomeCard: [
     {
       title: "Innovatsion usul",
       description:
-        "Biz sizga innovatsion usulda o'rganishingizga yordam beramiz"
+        "Biz sizga innovatsion usulda o'rganishingizga yordam beramiz",
     },
     {
       title: "Kreative Jamoa",
       description:
-        "Biz har doim jamoamiz uchun eng ishonchli xodimlarni tanlaganmiz"
+        "Biz har doim jamoamiz uchun eng ishonchli xodimlarni tanlaganmiz",
     },
     {
       title: "Maqsadli takliflar",
       description:
-        "Biz barcha talabalarimizga maqsadni to'g'ri tanlashga va unga yo'lni zabt etishga yordam beramiz."
-    }
+        "Biz barcha talabalarimizga maqsadni to'g'ri tanlashga va unga yo'lni zabt etishga yordam beramiz.",
+    },
   ],
   about: {
     title: "Nanonet Konsulting Akademiyasi",
@@ -112,16 +120,16 @@ const uzbek = {
       [
         "Professional jamoa",
         "Haqiqiy natijalarga erishing",
-        "Biz birgalikda maqsadga erishamiz."
+        "Biz birgalikda maqsadga erishamiz.",
       ],
-      ["Ta'lim uchun ajoyib joy", "Milliy  an'analar bilan uyg'unlikda"]
-    ]
+      ["Ta'lim uchun ajoyib joy", "Milliy  an'analar bilan uyg'unlikda"],
+    ],
   },
   singleBlog: {
     title: "Ertaga o'ladigandek yashang, abadiy yashayotgandek o'rganing",
-    author: "Mahatma Gandi"
+    author: "Mahatma Gandi",
   },
-  requestLanguage: "UZ"
+  requestLanguage: "UZ",
 };
 
 export default uzbek;

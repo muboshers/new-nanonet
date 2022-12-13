@@ -7,67 +7,32 @@
             <article class="blog-post-wrapper">
               <div class="blog-banner">
                 <a href="#" class="blog-images">
-                  <img src="/img/blog/b1.jpg" alt="" />
+                  <img
+                    :src="
+                      'http://consultingweb.duckdns.org/api/v1/upload/' +
+                      singleBlog.image
+                    "
+                    alt=""
+                  />
                 </a>
                 <div class="blog-content">
                   <div class="blog-meta">
                     <span class="admin-type">
                       <i class="fa fa-user"></i>
-                      Admin
+                      {{ singleBlog.author }}
                     </span>
                     <span class="date-type">
                       <i class="fa fa-calendar"></i>
-                      24 april, 2019
+                      {{ dateFormat(singleBlog.createdDate) }}
                     </span>
                     <span class="comments-type">
                       <i class="fa fa-comment-o"></i>
                       07
                     </span>
                   </div>
-                  <h4>The universal acceptance has given a tremendous</h4>
+                  <h4>{{ singleBlog.title }}</h4>
                   <p>
-                    The universal acceptance of Consultation has given a
-                    tremendous opportunity for merchants to do crossborder
-                    transactions instantly and at reduced cost.Consultations are
-                    slowly gaining immense recognition and are growing
-                    phenomenally with more and more people trading with this
-                    digital currency.
-                  </p>
-                  <blockquote>
-                    <p>
-                      Consultations are slowly gaining immense recognition and
-                      are growing phenomenally with more and more people trading
-                      with this digital currency. The universal acceptance of
-                      Consultation.
-                    </p>
-                  </blockquote>
-                  <p>
-                    The universal acceptance of Consultation has given a
-                    tremendous opportunity for merchants to do crossborder
-                    transactions instantly and at reduced cost.Consultations are
-                    slowly gaining immense recognition and are growing
-                    phenomenally with more..
-                  </p>
-                  <h5>With more and more people trading with this digital</h5>
-                  <p>
-                    The universal acceptance of Consultation has given a
-                    tremendous opportunity for merchants to do crossborder
-                    transactions instantly and at reduced cost.Consultations are
-                    slowly gaining immense recognition and are growing
-                    phenomenally with more..
-                  </p>
-                  <div class="img-blog left-blog-img">
-                    <img src="/img/blog/b3.jpg" alt="" />
-                  </div>
-                  <div class="img-blog right-blog-img">
-                    <img src="/img/blog/b4.jpg" alt="" />
-                  </div>
-                  <p>
-                    The universal acceptance of Consultation has given a
-                    tremendous opportunity for merchants to do crossborder
-                    transactions instantly and at reduced cost.Consultations are
-                    slowly gaining immense recognition and are growing
-                    phenomenally with more..
+                    {{ singleBlog.description }}
                   </p>
                 </div>
               </div>
@@ -82,7 +47,20 @@
 
 <script>
 export default {
-  name: "BlogDetails"
+  name: "BlogDetails",
+
+  props: {
+    singleBlog: Object,
+  },
+
+  methods: {
+    dateFormat(date) {
+      const newTime = new Date(date);
+      return `${newTime.getDate()}/${
+        newTime.getMonth() + 1
+      }/${newTime.getFullYear()}`;
+    },
+  },
 };
 </script>
 

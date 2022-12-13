@@ -3,104 +3,48 @@
     <div class="container p-4">
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
-          <div class="section-headline text-center">
-            <h3>Technology news</h3>
-            <p>
-              Dummy text is also used to demonstrate the appearance of different
-              typefaces and layouts
-            </p>
+        
           </div>
         </div>
 
         <div class="row">
-          <div class="col-md-4 col-sm-6 col-xs-12">
+          <div
+            class="col-md-4 col-sm-6 col-xs-12"
+            v-for="(blog, index) in data.slice(0, 4)"
+            :key="index"  
+          >
             <div class="single-blog">
               <div class="blog-image">
-                <a class="image-scale" href="#">
-                  <img src="/img/blog/b1.jpg" alt="" />
-                </a>
+                <nuxt-link
+                  class="image-scale"
+                  :to="localePath(`/blog/${blog.id}`)"
+                >
+                  <img
+                    :src="
+                      'http://consultingweb.duckdns.org/api/v1/upload/' +
+                      blog.image
+                    "
+                    alt="blog.title"
+                  />
+                </nuxt-link>
               </div>
               <div class="blog-content">
                 <div class="blog-meta">
                   <span class="admin-type">
                     <i class="fa fa-user"></i>
-                    Admin
+                    {{ blog.author }}
                   </span>
                   <span class="date-type">
                     <i class="fa fa-calendar"></i>
-                    20 july, 2019
-                  </span>
-                  <span class="comments-type">
-                    <i class="fa fa-comment-o"></i>
-                    13
+                    {{ dateFormat(blog.createdDate) }}
                   </span>
                 </div>
-                <a href="#">
-                  <h4>
-                    Creative design clients response is better
-                  </h4>
-                </a>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="single-blog">
-              <div class="blog-image">
-                <a class="image-scale" href="#">
-                  <img src="/img/blog/b2.jpg" alt="" />
-                </a>
-              </div>
-              <div class="blog-content">
-                <div class="blog-meta">
-                  <span class="admin-type">
-                    <i class="fa fa-user"></i>
-                    Admin
-                  </span>
-                  <span class="date-type">
-                    <i class="fa fa-calendar"></i>
-                    13 may, 2018
-                  </span>
-                  <span class="comments-type">
-                    <i class="fa fa-comment-o"></i>
-                    16
-                  </span>
-                </div>
-                <a href="#">
+                <nuxt-link :to="localePath(`/blog/${blog.id}`)">
                   <h4>
-                    We're Committed to People, Committed to the Future.
+                    {{ blog.title }}
                   </h4>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="single-blog">
-              <div class="blog-image">
-                <a class="image-scale" href="#">
-                  <img src="/img/blog/b3.jpg" alt="" />
-                </a>
-              </div>
-              <div class="blog-content">
-                <div class="blog-meta">
-                  <span class="admin-type">
-                    <i class="fa fa-user"></i>
-                    Admin
-                  </span>
-                  <span class="date-type">
-                    <i class="fa fa-calendar"></i>
-                    24 april, 2019
-                  </span>
-                  <span class="comments-type">
-                    <i class="fa fa-comment-o"></i>
-                    07
-                  </span>
-                </div>
-                <a href="#">
-                  <h4>
-                    Simple Solutions for Complex Connections
-                  </h4>
-                </a>
+                </nuxt-link>
               </div>
             </div>
           </div>
@@ -112,7 +56,36 @@
 
 <script>
 export default {
-  name: "HomeBlog"
+  name: "HomeBlog",
+
+  data() {
+    return {
+      data: [],
+    };
+  },
+  methods: {
+    async getAllBlog() {
+      await fetch(
+        `https://consultingweb.duckdns.org/api/v1/blog/list?lang=${this.$t(
+          "requestLanguage"
+        )}`
+      )
+        .then((res) => res.json())
+        .then((d) => (this.data = d.data.content))
+        .catch((err) => console.log(err.message));
+    },
+
+    dateFormat(date) {
+      const newTime = new Date(date);
+      return `${newTime.getDate()}/${
+        newTime.getMonth() + 1
+      }/${newTime.getFullYear()}`;
+    },
+  },
+
+  mounted() {
+    this.getAllBlog();
+  },
 };
 </script>
 

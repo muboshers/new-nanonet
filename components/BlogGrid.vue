@@ -17,9 +17,15 @@
           >
             <div class="single-blog">
               <div class="blog-image">
-                <nuxt-link class="image-scale" to="/">
+                <nuxt-link
+                  class="image-scale"
+                  :to="localePath(`/blog/${blog.id}`)"
+                >
                   <img
-                    :src=" 'http://consultingweb.duckdns.org/api/v1/upload/' + blog.image"
+                    :src="
+                      'http://consultingweb.duckdns.org/api/v1/upload/' +
+                      blog.image
+                    "
                     alt="blog.title"
                   />
                 </nuxt-link>
@@ -32,14 +38,15 @@
                   </span>
                   <span class="date-type">
                     <i class="fa fa-calendar"></i>
-                    {{ blog.createdDate }}
+                    {{ dateFormat(blog.createdDate) }}
                   </span>
                 </div>
-                <a href="#">
+
+                <nuxt-link :to="localePath(`/blog/${blog.id}`)">
                   <h4>
                     {{ blog.title }}
                   </h4>
-                </a>
+                </nuxt-link>
               </div>
             </div>
           </div>
@@ -55,7 +62,7 @@ export default {
 
   data() {
     return {
-      data: []
+      data: [],
     };
   },
   methods: {
@@ -65,15 +72,22 @@ export default {
           "requestLanguage"
         )}`
       )
-        .then(res => res.json())
-        .then(d => (this.data = d.data.content))
-        .catch(err => console.log(err.message));
-    }
+        .then((res) => res.json())
+        .then((d) => (this.data = d.data.content))
+        .catch((err) => console.log(err.message));
+    },
+
+    dateFormat(date) {
+      const newTime = new Date(date);
+      return `${newTime.getDate()}/${
+        newTime.getMonth() + 1
+      }/${newTime.getFullYear()}`;
+    },
   },
 
   mounted() {
     this.getAllBlog();
-  }
+  },
 };
 </script>
 
