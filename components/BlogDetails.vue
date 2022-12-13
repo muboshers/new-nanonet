@@ -9,7 +9,7 @@
                 <a href="#" class="blog-images">
                   <img
                     :src="
-                      'http://consultingweb.duckdns.org/api/v1/upload/' +
+                      'https://consultingweb.duckdns.org/api/v1/upload/' +
                       singleBlog.image
                     "
                     alt=""
