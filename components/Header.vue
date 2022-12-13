@@ -9,7 +9,10 @@
         <div class="row">
           <div class="col-md-3 col-sm-3">
             <div class="logo">
-              <nuxt-link class="navbar-brand page-scroll logo" to="/">
+              <nuxt-link
+                class="navbar-brand page-scroll logo"
+                :to="localePath('/')"
+              >
                 <img
                   src="/img/logo/consulty-logo.png"
                   style=" height: 60px; object-fit: contain;"
@@ -144,7 +147,7 @@ export default {
     var windows = $(window);
     var sticky = $("#sticker");
 
-    windows.on("scroll", function() {
+    windows.on("scroll", function () {
       var scroll = windows.scrollTop();
       if (scroll < 300) {
         sticky.removeClass("stick");
@@ -161,17 +164,17 @@ export default {
       languages: [
         {
           name: "ENG",
-          title: "en"
+          title: "en",
         },
         {
           name: "RUS",
-          title: "ru"
+          title: "ru",
         },
         {
           name: "UZB",
-          title: "uz"
-        }
-      ]
+          title: "uz",
+        },
+      ],
     };
   },
   methods: {
@@ -182,8 +185,8 @@ export default {
     handleToggle() {
       this.isLanguageActive = false;
       this.isNavbar = !this.isNavbar;
-    }
-  }
+    },
+  },
 };
 </script>
 

@@ -2446,9 +2446,9 @@
   "version" "1.1.4"
 
 "color-string@^1.5.4":
-  "integrity" "sha512-jgIoum0OfQfq9Whcfc2z/VhCNcmQjWbey6qBX0vqt7YICflUmBCh9E9CiQD5GSJ+Uehixm3NUwHVhqUAWRivZg=="
-  "resolved" "https://registry.npmjs.org/color-string/-/color-string-1.5.5.tgz"
-  "version" "1.5.5"
+  "integrity" "sha512-shrVawQFojnZv6xM40anx4CkoDP+fZsw/ZerEMsW/pyzsRbElpsL/DBVW7q3ExxwusdNXI3lXpuhEZkzs8p5Eg=="
+  "resolved" "https://registry.npmjs.org/color-string/-/color-string-1.9.1.tgz"
+  "version" "1.9.1"
   dependencies:
     "color-name" "^1.0.0"
     "simple-swizzle" "^0.2.2"
@@ -2986,6 +2986,11 @@
   "resolved" "https://registry.npmjs.org/defu/-/defu-3.2.2.tgz"
   "version" "3.2.2"
 
+"defu@^6.0.0":
+  "integrity" "sha512-aA964RUCsBt0FGoNIlA3uFgo2hO+WWC0fiC6DBps/0SFzkKcYoM/3CzVLIa5xSsrFjdioMdYgAIbwo80qp2MoA=="
+  "resolved" "https://registry.npmjs.org/defu/-/defu-6.1.1.tgz"
+  "version" "6.1.1"
+
 "depd@~1.1.2":
   "integrity" "sha1-m81S4UwJd2PnSbJ0xDRu0uVgtak="
   "resolved" "https://registry.npmjs.org/depd/-/depd-1.1.2.tgz"
@@ -2999,10 +3004,10 @@
     "inherits" "^2.0.1"
     "minimalistic-assert" "^1.0.0"
 
-"destr@^1.0.0", "destr@^1.1.0":
-  "integrity" "sha512-Ev/sqS5AzzDwlpor/5wFCDu0dYMQu/0x2D6XfAsQ0E7uQmamIgYJ6Dppo2T2EOFVkeVYWjc+PCLKaqZZ57qmLg=="
-  "resolved" "https://registry.npmjs.org/destr/-/destr-1.1.0.tgz"
-  "version" "1.1.0"
+"destr@^1.1.0", "destr@^1.1.1":
+  "integrity" "sha512-lrbCJwD9saUQrqUfXvl6qoM+QN3W7tLV5pAOs+OqOmopCCz/JkE05MHedJR1xfk4IAnZuJXPVuN5+7jNA2ZCiA=="
+  "resolved" "https://registry.npmjs.org/destr/-/destr-1.2.2.tgz"
+  "version" "1.2.2"
 
 "destroy@^1.0.4", "destroy@~1.0.4":
   "integrity" "sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA="
@@ -3343,9 +3348,9 @@
     "safe-buffer" "^5.1.1"
 
 "execa@^5.0.0":
-  "integrity" "sha512-ov6w/2LCiuyO4RLYGdpFGjkcs0wMTgGE8PrkTHikeUy5iJekXyPIKUjifk5CsE0pt7sMCrMZ3YNqoCj6idQOnQ=="
-  "resolved" "https://registry.npmjs.org/execa/-/execa-5.0.0.tgz"
-  "version" "5.0.0"
+  "integrity" "sha512-8uSpZZocAZRBAPIEINJj3Lo9HyGitllczc27Eh5YYojjMFMn8yHMDMaUHE2Jqfq05D/wucwI4JGURyXt1vchyg=="
+  "resolved" "https://registry.npmjs.org/execa/-/execa-5.1.1.tgz"
+  "version" "5.1.1"
   dependencies:
     "cross-spawn" "^7.0.3"
     "get-stream" "^6.0.0"
@@ -6393,12 +6398,12 @@
   "version" "1.2.1"
 
 "rc9@^1.2.0":
-  "integrity" "sha512-/jknmhG0USFAx5uoKkAKhtG40sONds9RWhFHrP1UzJ3OvVfqFWOypSUpmsQD0fFwAV7YtzHhsn3QNasfAoxgcQ=="
-  "resolved" "https://registry.npmjs.org/rc9/-/rc9-1.2.0.tgz"
-  "version" "1.2.0"
+  "integrity" "sha512-YD1oJO9LUzMdmr2sAsVlwQVtEoDCmvuyDwmSWrg2GKFprl3BckP5cmw9rHPunei0lV6Xl4E5t2esT+0trY1xfQ=="
+  "resolved" "https://registry.npmjs.org/rc9/-/rc9-1.2.4.tgz"
+  "version" "1.2.4"
   dependencies:
-    "defu" "^2.0.4"
-    "destr" "^1.0.0"
+    "defu" "^6.0.0"
+    "destr" "^1.1.1"
     "flat" "^5.0.0"
 
 "read-cache@^1.0.0":

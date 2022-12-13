@@ -1,7 +1,7 @@
 <template>
   <div class="welcome-area fix area-padding">
     <div class="container">
-      <div class="row">
+      <div class="row main__animation-row">
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="all-wel-services">
             <div
@@ -33,8 +33,44 @@
 
 <script>
 export default {
-  name: "Welcome"
+  name: "Welcome",
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+
+.main__animation-row {
+  position:relative;
+}
+
+
+.main__animation-row::before {
+  position:absolute;
+  width:10%;
+  content:'';
+  background-color:#e7e7e7;
+  height:1.5px;
+  animation:3.3s scrollAnimation  ease;
+  opacity:0;
+}
+
+@keyframes scrollAnimation {
+  25%:{
+    opacity:1;
+    width:25%;
+
+  }
+  50% {
+    opacity:1;
+    width:50%;
+  }
+  75% {
+    opacity:1;
+    width:75%;
+  }
+  100% {
+    opacity:1;
+    width:100%;
+  }
+}
+</style>

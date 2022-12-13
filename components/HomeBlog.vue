@@ -2,50 +2,47 @@
   <div class="home-blog">
     <div class="container p-4">
       <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-        
-          </div>
-        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12"></div>
+      </div>
 
-        <div class="row">
-          <div
-            class="col-md-4 col-sm-6 col-xs-12"
-            v-for="(blog, index) in data.slice(0, 4)"
-            :key="index"  
-          >
-            <div class="single-blog">
-              <div class="blog-image">
-                <nuxt-link
-                  class="image-scale"
-                  :to="localePath(`/blog/${blog.id}`)"
-                >
-                  <img
-                    :src="
-                      'https://consultingweb.duckdns.org/api/v1/upload/' +
-                      blog.image
-                    "
-                    alt="blog.title"
-                  />
-                </nuxt-link>
+      <div class="row">
+        <div
+          class="col-md-4 col-sm-6 col-xs-12"
+          v-for="(blog, index) in data.slice(0, 4)"
+          :key="index"
+        >
+          <div class="single-blog">
+            <div class="blog-image">
+              <nuxt-link
+                class="image-scale"
+                :to="localePath(`/blog/${blog.id}`)"
+              >
+                <img
+                  :src="
+                    'https://consultingweb.duckdns.org/api/v1/upload/' +
+                    blog.image
+                  "
+                  alt="blog.title"
+                />
+              </nuxt-link>
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="admin-type">
+                  <i class="fa fa-user"></i>
+                  {{ blog.author }}
+                </span>
+                <span class="date-type">
+                  <i class="fa fa-calendar"></i>
+                  {{ dateFormat(blog.createdDate) }}
+                </span>
               </div>
-              <div class="blog-content">
-                <div class="blog-meta">
-                  <span class="admin-type">
-                    <i class="fa fa-user"></i>
-                    {{ blog.author }}
-                  </span>
-                  <span class="date-type">
-                    <i class="fa fa-calendar"></i>
-                    {{ dateFormat(blog.createdDate) }}
-                  </span>
-                </div>
 
-                <nuxt-link :to="localePath(`/blog/${blog.id}`)">
-                  <h4>
-                    {{ blog.title }}
-                  </h4>
-                </nuxt-link>
-              </div>
+              <nuxt-link :to="localePath(`/blog/${blog.id}`)">
+                <h4>
+                  {{ blog.title }}
+                </h4>
+              </nuxt-link>
             </div>
           </div>
         </div>

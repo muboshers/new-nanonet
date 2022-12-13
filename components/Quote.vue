@@ -2,8 +2,8 @@
   <div class="quote-area bg-color area-padding">
     <div class="container">
       <div class="row">
-        <div class="col-md-12 col-sm-12 ">
-          <div class="row ">
+        <div class="col-md-12 col-sm-12">
+          <div class="row">
             <div class="col-md-5 col-sm-4 col-xs-12">
               <div class="sub-head white-headline">
                 <h3>{{ $t("contact.title") }}</h3>
@@ -75,7 +75,7 @@ export default {
       fullName: "",
       description: "",
       phoneNumber: "",
-      email: ""
+      email: "",
     };
   },
   methods: {
@@ -85,26 +85,31 @@ export default {
         {
           method: "POST",
           headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({
             fullName: this.fullName,
             description: this.description,
             phoneNumber: this.phoneNumber,
             email: this.email,
-            subject: ""
-          })
+            subject: "",
+          }),
         }
       );
     },
 
     createContactMessage() {
       this.contactMessageRequest()
-        .then(res => res.json())
-        .then(d => console.log(d))
-        .catch(err => console.log(err));
-    }
-  }
+        .then((res) => res.json())
+        .then((d) => console.log(d))
+        .catch((err) => console.log(err));
+
+      this.fullName = "";
+      this.description = "";
+      this.phoneNumber = "";
+      this.email = "";
+    },
+  },
 };
 </script>
 

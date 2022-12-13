@@ -36,19 +36,19 @@ export default {
     Welcome,
     Header,
     Slider,
-    HomeBlog
+    HomeBlog,
   },
   head() {
     return {
-      title: "Nanonet Consulty Agency"
+      title: "Nanonet Consulty Agency",
     };
   },
 
   data() {
     return {
-      sliderContent: [{}]
+      sliderContent: [{}],
     };
-  }
+  },
 };
 </script>
 

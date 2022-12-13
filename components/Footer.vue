@@ -7,7 +7,7 @@
             <div class="footer-content logo-footer">
               <div class="footer-head">
                 <div class="footer-logo">
-                  <nuxt-link class="logo" to="/">
+                  <nuxt-link class="logo" :to="localePath('/')">
                     <img
                       src="/img/logo/consulty-logo.jpg"
                       style=" object-fit: contain;height: 60px;"
@@ -129,7 +129,7 @@
 
 <script>
 export default {
-  name: "Footer"
+  name: "Footer",
 };
 </script>
 
