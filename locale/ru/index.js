@@ -5,6 +5,7 @@ const russian = {
     about: "О Нас",
     service: "Услуги",
     blog: "Блог",
+    courses:"Курсы",
     pageTitle: {
       about: "About Us"
     }

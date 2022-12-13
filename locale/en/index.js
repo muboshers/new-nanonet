@@ -5,6 +5,7 @@ const english = {
     about: "About",
     service: "Service",
     blog: "Blog",
+    courses:'Courses',
   },
   lang: "ENG",
   read:"Read More",

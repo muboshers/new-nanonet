@@ -4,7 +4,8 @@
     <PageTitle :pageTitle="category ? category.title : ''" />
     <About />
 
-    <div v-if="eduData.length > 0">
+    <div class="data-container" v-if="eduData.length > 0">
+      <h2 class="text-center">{{ $t("header.service") }}</h2>
       <div class="service-area bg-color area-padding-2">
         <div class="container">
           <div class="row">
@@ -61,13 +62,14 @@
         </div>
       </div>
     </div>
-
+    <Quote />
     <Footer />
   </div>
 </template>
 
 <script>
 import Header from "../../components/Header";
+import Quote from "../../components/Quote";
 import Welcome from "../../components/Welcome";
 import PageTitle from "../../components/PageTitle";
 import About from "../../components/About";
@@ -78,6 +80,7 @@ export default {
     Header,
     PageTitle,
     Welcome,
+    Quote,
     About,
     Footer
   },
@@ -135,5 +138,10 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.data-container {
+  background-color: rgb(245, 248, 251);
+  padding: 2rem 0;
 }
 </style>

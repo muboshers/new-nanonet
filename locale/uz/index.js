@@ -4,7 +4,8 @@ const uzbek = {
     contact: "Aloqa",
     about: "Biz haqimizda",
     service: "Xizmatlar",
-    blog: "Maqola"
+    blog: "Maqola",
+    courses:"O'quv kurslari"
   },
   lang: "UZB",
   read: "Ko'proq o'qish",
